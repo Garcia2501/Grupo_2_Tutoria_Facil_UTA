@@ -35,3 +35,16 @@ Grupo_2_Tutoria_Facil_UTA/
 │   └── capturas/                  # Capturas de las 4 pantallas del flujo
 └── evaluacion/                    # Resultados de validación con usuarios
     └── prueba_iteracion.md        # Registro de prueba cruzada y mejora aplicada
+```
+
+## Prototipo y estado de las evidencias
+
+El [enlace al archivo de Figma y el recorrido de validación](prototipo/enlace_prototipo.md)
+están documentados en `prototipo/`. Manolo coordina la integración de las cuatro
+pantallas, la evidencia visual y la prueba cruzada.
+
+La estructura anterior describe los entregables previstos: los PDF, las capturas
+y `evaluacion/prueba_iteracion.md` aún no están incluidos en esta rama.
+Queda pendiente verificar los permisos de Figma, exportar las cuatro pantallas y
+registrar los resultados reales de la prueba y la mejora aplicada. No se ha
+documentado una prueba completada ni una iteración validada.
