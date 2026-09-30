@@ -1,0 +1,74 @@
+% Fragmento LaTeX con el aporte de Kevin para el informe de Tutoría Fácil UTA.
+% Integre estas secciones en lugar de los apartados equivalentes del documento
+% principal; no las agregue además de los mismos apartados para evitar duplicados.
+% También puede renombrar este archivo a parte_kevin.tex y cargarlo con
+% \input{parte_kevin} desde el documento principal.
+% Requiere tabularx y array en el preámbulo del documento principal.
+
+\section{Fundamentos de interacción humano-computador}
+
+\begin{tabularx}{\textwidth}{|p{2.5cm}|X|p{1.8cm}|}
+\hline
+\textbf{Elemento} & \textbf{Análisis del caso} & \textbf{Evidencia} \\\hline
+Personas y objetivos & Estudiante: consultar disponibilidad, reservar, confirmar y reprogramar sin intercambiar varios mensajes. Laura representa el uso desde el teléfono mientras viaja en bus. Docente: ofrecer disponibilidad y atender solicitudes. Secretaría: registrar cambios, actualmente en una hoja de cálculo. & E1, E6, E7 \\\hline
+Sistema & Centraliza la consulta de disponibilidad, selección de horario, reserva, estado de la cita y reprogramación. Comunica franjas libres u ocupadas, selección, carga, confirmación y errores. & E3, E5, E7, E8 \\\hline
+Entradas y salidas & Entradas: elegir acción, docente, fecha y horario; revisar, volver, confirmar o reprogramar. Salidas: disponibilidad y estados identificables, resumen de la cita, confirmación y orientación para corregir errores. & E3, E5, E8, E10 \\\hline
+Disciplinas de apoyo & Informática: representar la disponibilidad y los cambios para prevenir dobles reservas. Psicología cognitiva: reducir memoria y ambigüedad. Ergonomía: considerar teléfono, teclado, ampliación y lector. Diseño: jerarquía clara, calendario y estados textuales. & E2, E3, E8, E9 \\\hline
+Estilos de interacción & Menús para navegar; formularios o controles etiquetados para escoger docente y fecha; manipulación directa para seleccionar o cambiar una franja visible. Facilitan corregir la selección y reducen el intercambio de mensajes. & E1, E3, E10 \\\hline
+\end{tabularx}
+
+\section{Diseño centrado en el usuario}
+
+\subsection{Contexto de uso}
+\begin{tabularx}{\textwidth}{|X|X|X|X|}
+\hline
+\textbf{Usuarios y capacidades} & \textbf{Tareas} & \textbf{Entorno y dispositivos} & \textbf{Restricciones} \\\hline
+Estudiantes: Laura consulta desde el móvil; Carlos usa teclado, ampliación al 200\% y lector de pantalla. Docentes y secretaría intervienen indirectamente. (E1, E2, E6, E7) & Consultar disponibilidad, reservar, confirmar y reprogramar una tutoría. (E1, E3, E10) & Teléfono durante un viaje en bus y conexión móvil variable. Docentes actualizan disponibilidad; secretaría usa una hoja de cálculo. (E1, E6, E7, E8) & Esperas e intercambios largos, horarios ocupados, confirmaciones ambiguas o perdidas, disponibilidad desactualizada y acceso por teclado/lector. (E2--E8) \\\hline
+\end{tabularx}
+
+\subsection{Persona}
+\textbf{Laura}, estudiante de 20 años. Su objetivo es reservar una tutoría sin intercambiar varios mensajes. Consulta horarios desde su teléfono mientras viaja en bus (E1). Le frustra esperar para acordar un horario y no localizar claramente la confirmación. Necesita identificar la disponibilidad, completar la reserva y encontrar después el estado y los datos de la cita (E4, E5).
+
+\subsection{Escenario del proceso actual}
+Durante un viaje en bus, Laura necesita coordinar una tutoría. Escribe al docente, espera su respuesta y propone horarios hasta llegar a un acuerdo. El proceso tarda en promedio 14 minutos y nueve mensajes (E4). Puede haber intentos de elegir horarios ocupados o confusión sobre la confirmación (E3); el mensaje puede quedar mezclado con otros y hacer que se olvide la fecha (E5). Si Laura necesita cambiar la cita, inicia otra conversación. Necesita saber qué horario quedó acordado y poder solicitar un cambio sin repetir el intercambio. Este escenario describe el proceso actual, no las pantallas futuras.
+
+\subsection{Journey map del proceso actual}
+\begin{tabularx}{\textwidth}{|p{1.7cm}|X|X|X|X|X|}
+\hline
+ & \textbf{Buscar} & \textbf{Contactar} & \textbf{Acordar} & \textbf{Confirmar} & \textbf{Cambiar} \\\hline
+Acción & Escribe al docente para consultar horarios. & Envía mensajes y espera respuesta. & Propone horarios hasta acordar uno. & Busca la confirmación en la conversación. & Inicia otra conversación para cambiar la cita. \\\hline
+Pensamiento & ¿Qué horas están libres? & ¿Cuándo responderá? & ¿Seguirá libre este horario? & ¿La cita quedó confirmada? & ¿Tengo que empezar de nuevo? \\\hline
+Emoción & Incertidumbre. & Impaciencia. & Duda. & Inseguridad. & Frustración. \\\hline
+Problema & No hay disponibilidad unificada; debe preguntar (E1, E4). & La respuesta puede tardar o llegar fuera de horario (E4, E6). & Se intentaron seleccionar horarios ocupados (E3). & Hubo confirmaciones ambiguas y citas olvidadas (E3, E5). & El cambio reinicia el intercambio y la hoja puede estar desactualizada (E7). \\\hline
+Oportunidad & Mostrar disponibilidad por docente y fecha. & Indicar el estado de espera mientras llega respuesta (E8). & Diferenciar horarios libres y ocupados. & Mostrar el estado confirmado y los datos de la cita. & Iniciar la reprogramación desde la cita y permitir corregir antes de confirmar (E10). \\\hline
+\end{tabularx}
+
+\subsection{Requisitos de usuario}
+\begin{tabularx}{\textwidth}{|p{0.7cm}|X|p{1.5cm}|p{2.2cm}|}
+\hline
+\textbf{N.} & \textbf{Requisito} & \textbf{Evidencia} & \textbf{Pantalla} \\\hline
+1 & La estudiante debe poder consultar horarios por docente y fecha desde el teléfono, cuando viaja con conexión variable, para escoger una opción sin intercambiar varios mensajes. & E1, E4, E8 & 1 y 2 \\\hline
+2 & La persona debe poder identificar con teclado o lector los horarios libres y ocupados al consultar disponibilidad, para evitar seleccionar una cita ocupada. & E2, E3 & 2 \\\hline
+3 & La persona debe poder revisar docente, fecha, hora y modalidad y volver para corregir antes de confirmar, cuando está por reservar, para evitar cerrar una selección equivocada. & E10 & 3 \\\hline
+4 & La persona debe poder reconocer la confirmación y consultar los datos de la cita después de reservar, para no olvidar la fecha acordada. & E5 & 4 \\\hline
+5 & La persona debe poder iniciar la reprogramación desde una cita existente y escoger otro horario libre antes de confirmar el cambio, para no comenzar otra conversación. & E7, E10 & 4, 2 y 3 \\\hline
+\end{tabularx}
+
+\section{Aporte de Kevin al prototipo: pantallas 1 y 2}
+
+El prototipo se realiza en el archivo compartido de Figma con componentes locales y funciones disponibles sin solicitar funciones de pago. Se respetan las pantallas y componentes de Luis y Manolo; Kevin no modifica ni diseña las pantallas 3 y 4.
+
+\subsection{Pantalla 1: Inicio y búsqueda}
+Incluye el título \textit{Tutoría Fácil UTA}, una descripción breve de la funcionalidad y los botones \textit{Reservar tutoría} y \textit{Mis tutorías}. La jerarquía y los controles deben ser claros y fáciles de usar en móvil. \textit{Reservar tutoría} abre la pantalla 2; \textit{Mis tutorías} queda preparado para enlazarse con la pantalla 4 de Manolo.
+
+\subsection{Pantalla 2: Docente y horario}
+Presenta los siguientes datos ficticios para demostración: docente Ana Pérez, modalidad virtual, jueves 8 de octubre de 2026; 09:00 y 11:00 disponibles; 10:00 ocupado y bloqueado para selección.
+
+Los estados \textit{Disponible}, \textit{Seleccionado} y \textit{Ocupado} se distinguen mediante texto y apariencia, no solo por color. Se muestra cuál es la selección actual. El botón \textit{Continuar} permanece inactivo hasta que se elija una franja disponible. La persona puede cambiar su selección o volver al inicio. Se representan los estados \textit{Cargando horarios...} y \textit{Error al cargar horarios}, con acción \textit{Reintentar}.
+
+Los controles llevan etiquetas claras, tienen foco visible y se anota el orden de tabulación por teclado. \textit{Continuar} queda preparado para enlazarse con la pantalla 3 de Luis; no se crea una copia de esa pantalla. Las interacciones que no se puedan prototipar se describen en una anotación textual. Si no existe un sistema de diseño local, se utiliza como base fondo claro, texto oscuro y botones azules. La indicación de que los datos son ficticios se coloca fuera de la interfaz visible.
+
+\noindent\textbf{Trazabilidad del diseño:} uso móvil durante un viaje (E1); prevención de selección de horarios ocupados (E3); acceso por teclado, ampliación y lector (E2); respuesta móvil variable (E8); iconos potencialmente ambiguos (E9); corrección antes de confirmar (E10).
+
+% Insertar las capturas de las pantallas 1 y 2 y el enlace al archivo compartido
+% cuando estén disponibles en prototipo/capturas/ y prototipo/enlace_prototipo.md.
